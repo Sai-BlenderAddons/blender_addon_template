@@ -29,3 +29,26 @@ bl_info = {
 
 import os
 import bpy
+
+from . import ui, actions, operators, properties
+
+classes = ()
+
+def register():
+    properties.register()
+    operators.register()
+    ui.register()
+
+    for cls in classes:
+        bpy.utils.register_class(cls)
+
+def unregister():
+    properties.unregister()
+    operators.unregister()
+    ui.unregister()
+    
+    for cls in classes:
+        bpy.utils.unregister_class(cls)
+
+if __name__ == '__main__':
+    register()
