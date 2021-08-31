@@ -28,8 +28,8 @@ class EXAMPLE_PT_child(bpy.types.Panel):
 
 
 classes = (
-    # EXAMPLE_PT_main_panel,
-    # EXAMPLE_PT_child,
+    EXAMPLE_PT_main_panel,
+    EXAMPLE_PT_child,
 )
 
 def register():

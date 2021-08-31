@@ -21,7 +21,7 @@ class EXAMPLE_preferences(bpy.types.AddonPreferences):
 
         if self.tab_menu == "Info":
             layout.use_property_split = True
-            layout.label(text = "Update : 20210707")
+            layout.label(text = "Update : 20210831")
 
         elif self.tab_menu == "Link":
             row = layout.row()

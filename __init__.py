@@ -30,7 +30,7 @@ bl_info = {
 import os
 import bpy
 
-from . import ui, actions, operators, properties
+from . import ui, actions, operators, properties, prefs
 
 classes = ()
 
@@ -38,6 +38,7 @@ def register():
     properties.register()
     operators.register()
     ui.register()
+    prefs.register()
 
     for cls in classes:
         bpy.utils.register_class(cls)
@@ -46,6 +47,7 @@ def unregister():
     properties.unregister()
     operators.unregister()
     ui.unregister()
+    prefs.unregister()
     
     for cls in classes:
         bpy.utils.unregister_class(cls)
